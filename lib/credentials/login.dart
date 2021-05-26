@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
                         fit: BoxFit.cover,
                       ))),
               Positioned(
-                  top: size.height * .4,
+                  top: size.height * .4 - 20,
                   width: size.width * .8,
                   left: size.width * .1,
                   child: Card(
@@ -87,6 +87,18 @@ class _LoginPageState extends State<LoginPage> {
                                   text: "Dont't have an account ?",),
                               TextSpan(
                                   text: "Sign Up ", )
+                            ]),
+                          ),
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                        ),
+                        SizedBox(height: 2,),
+                        InkWell(
+                          child: RichText(
+                            text: TextSpan(children: [
+                              TextSpan(
+                                text: "Forgot Password ?",),
                             ]),
                           ),
                           onTap: () {
